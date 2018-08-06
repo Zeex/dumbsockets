@@ -32,8 +32,10 @@
 #else
   #include <sys/socket.h>
   #include <fcntl.h>
+  #include <netdb.h>
+  #include <unistd.h>
   typedef socklen_t ds_socklen_t;
-  typedef int ds_socket;
+  typedef int ds_socket_t;
 #endif
 
 #ifdef __cplusplus
