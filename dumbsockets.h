@@ -42,7 +42,6 @@
 extern "C" {
 #endif
 
-int ds_init();
 int ds_getaddrinfo(
   const char *node,
   const char *service,
