@@ -48,8 +48,8 @@ int ds_getaddrinfo(
   const char *service,
   const struct addrinfo *hints,
   struct addrinfo **res);
-int ds_socket(int domain, int type, int protocol);
-int ds_accept(
+ds_socket_t ds_socket(int domain, int type, int protocol);
+ds_socket_t ds_accept(
   ds_socket_t sockfd,
   struct sockaddr *addr,
   ds_socklen_t *addrlen);

@@ -71,7 +71,7 @@ int ds_getaddrinfo(
   return getaddrinfo(node, service, hints, res);
 }
 
-int ds_socket(int domain, int type, int protocol) {
+ds_socket_t ds_socket(int domain, int type, int protocol) {
 #ifdef _WIN32
   if (!ds_init()) {
     return -1;
@@ -80,7 +80,7 @@ int ds_socket(int domain, int type, int protocol) {
   return socket(domain, type, protocol);
 }
 
-int ds_accept(
+ds_socket_t ds_accept(
   ds_socket_t sockfd,
   struct sockaddr *addr,
   ds_socklen_t *addrlen) {
